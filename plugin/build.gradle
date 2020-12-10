@@ -7,3 +7,16 @@ dependencies {
 
 sourceCompatibility = "1.7"
 targetCompatibility = "1.7"
+
+apply plugin: 'maven-publish'
+
+publishing {
+    publications {
+        JiaguPlugin(MavenPublication) {
+            from components.java
+            groupId 'com.simon'
+            artifactId 'jiagu'
+            version '1.0'
+        }
+    }
+}
